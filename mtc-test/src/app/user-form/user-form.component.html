@@ -1,0 +1,34 @@
+<form [formGroup]="userForm">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <label>
+    Birth Date:
+  <input matInput [matDatepicker]="picker" formControlName="birthDate">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  </label>
+
+  <label>
+    Phone Number:
+    <input type="tel" formControlName="phoneNumber">
+  </label>
+
+  <label>
+    Email:
+    <input type="text" formControlName="email">
+  </label>
+
+</form>
+
+<p>
+  <button (click)="saveUser()">Save User</button>
+</p>
